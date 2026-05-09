@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import styles from './Greenery.module.css'
 
 const Greenery = () => {
+    const [selectedProduct, setSelectedProduct] = useState(null); 
     const sidebar = [
         {
             id: 1,
@@ -40,9 +41,8 @@ const Greenery = () => {
     const CATEGORIES = ["All Plants", "New Arrivals", "Sale"];
     
     const [activeTab, setActiveTab] = useState("All Plants");
-    const [price, setPrice] = useState(1230); // Narx uchun state
+    const [price, setPrice] = useState(1230); 
 
-    // Filtrlash mantig'i: Ham kategoriya, ham narxni tekshiradi
     const filteredProducts = Product.filter(product => {
         const categoryMatch = activeTab === "All Plants" || product.category === activeTab;
         const currentPrice = parseFloat(product.price.replace('$', ''));
@@ -67,7 +67,6 @@ const Greenery = () => {
                     </div>
                 ))}
 
-                {/* Price Range Section - Endi statelarga bog'langan */}
                 <div className={styles.priceSection}>
                     <h3 className={styles.sectionTitle}>Price Range</h3>
                     <div className={styles.rangeWrapper}>
@@ -110,7 +109,7 @@ const Greenery = () => {
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <div key={product.id} className={styles.productCard}>
-                                <img src={product.img} alt={product.name} className={styles.productImage} />
+                                <img src={product.img} alt={product.name} className={styles.productImage}   onClick={() => setSelectedProduct(product)}/>
                                 <h3 className={styles.productName}>{product.name}</h3>
                                 <p className={styles.productPrice}>{product.price}</p>
                             </div>
@@ -120,6 +119,27 @@ const Greenery = () => {
                     )}
                 </div>
             </div>
+            
+{selectedProduct && (
+    <div className={styles.modalOverlay} onClick={() => setSelectedProduct(null)}>
+        <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={() => setSelectedProduct(null)}>×</button>
+            
+            <div className={styles.modalBody}>
+                <img src={selectedProduct.img} alt={selectedProduct.name} className={styles.modalImg} />
+                <div className={styles.modalDetails}>
+                    <h2 className={styles.modalName}>{selectedProduct.name}</h2>
+                    <p className={styles.modalPrice}>{selectedProduct.price}</p>
+                    <p className={styles.modalDesc}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, et praesentium laborum voluptatibus at consequuntur beatae nesciunt ratione debitis, ipsa dolore iure officia illo. 
+                    </p>
+                    <button className={styles.addToCart}>Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+)}
+
         </div>
     )
 }
