@@ -1,0 +1,91 @@
+.banner {
+  background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
+  display: flex;
+  align-items: center;
+  padding: 68px 43px;
+  margin-top: 12px;
+  position: relative;
+  min-height: 450px;
+}
+
+.content {
+  flex: 1;
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #3D3D3D;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 70px;
+  color: #3D3D3D;
+  margin: 0;
+}
+
+.title span {
+  color: #46A358;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 24px;
+  color: #727272;
+  max-width: 550px;
+  margin: 15px 0 38px 0;
+}
+
+.shopBtn {
+  background-color: #46A358;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bigPlant {
+  width: 450px;
+}
+
+.smallPlant {
+  width: 135px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(70, 163, 88, 0.3);
+  border-radius: 50%;
+}
+
+.activeDot {
+  width: 10px;
+  height: 10px;
+  background-color: #46A358;
+  border-radius: 50%;
+}

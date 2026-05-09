@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  
+  .bannerCard {
+    flex: 1;
+    background-color: #FBFBFB;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .imageBox {
+    flex: 1;
+  }
+  
+  .imageBox img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .content {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: 900;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+  }
+  
+  .desc {
+    font-size: 14px;
+    color: #727272;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    background-color: #46A358;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+  }
