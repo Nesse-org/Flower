@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Search, ShoppingCart, LogIn } from 'lucide-react';
 import styles from './Nav.module.css';
+
 const Nav = () => {
   const navData = {
     logoText: "GREENSHOP",
@@ -43,9 +44,13 @@ const Nav = () => {
         </button>
         
         <div className={styles.cartWrapper}>
-          <button className={styles.iconBtn}>
-            <ShoppingCart size={20} strokeWidth={1.5} />
-          </button>
+
+          <Link href="/korzina">
+            <button className={styles.iconBtn}>
+              <ShoppingCart size={20} strokeWidth={1.5} />
+            </button>
+          </Link>
+
           {navData.actions.cartCount > 0 && (
             <span className={styles.cartBadge}>{navData.actions.cartCount}</span>
           )}
@@ -57,7 +62,8 @@ const Nav = () => {
         </button>
       </div>
     </nav>
-          </div>
+
+    </div>
   );
 };
 
