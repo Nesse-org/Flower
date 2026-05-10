@@ -53,3 +53,68 @@
     cursor: pointer;
     font-weight: 700;
   }
+  .container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .bannerCard {
+    display: flex;
+    align-items: center;
+    background-color: #fbfbfb;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+      gap: 15px;
+    }
+  
+    .bannerCard {
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .imageBox {
+      margin-bottom: 15px;
+    }
+  
+    .imageBox img {
+      max-width: 150px;
+      height: auto;
+    }
+  
+    .title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+  
+    .desc {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 16px;
+    }
+    
+    .bannerCard {
+      padding: 10px;
+    }
+  }

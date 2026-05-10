@@ -89,3 +89,102 @@
   background-color: #46A358;
   border-radius: 50%;
 }
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 40px;
+  position: relative;
+}
+
+.content {
+  max-width: 60%;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bigPlant {
+  width: 400px;
+  height: auto;
+}
+
+.smallPlant {
+  width: 150px;
+  position: absolute;
+  left: -50px;
+  bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .content {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .imageContainer {
+    max-width: 100%;
+    justify-content: center;
+    order: 1;
+  }
+
+  .bigPlant {
+    width: 250px;
+  }
+
+  .smallPlant {
+    width: 80px;
+    left: 0;
+    bottom: 10px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .shopBtn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .dots {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .bigPlant {
+    width: 180px;
+  }
+
+  .smallPlant {
+    display: none;
+  }
+}

@@ -92,3 +92,57 @@
   align-items: center;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 10px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  .actions {
+    gap: 12px;
+  }
+
+  .loginBtn {
+    padding: 8px 12px;
+    font-size: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loginBtn svg {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .iconBtn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  .cartBadge {
+    min-width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+}
